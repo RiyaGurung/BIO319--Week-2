@@ -11,6 +11,7 @@ gsub_out
 #using the gsub function will replace your code with whatever you want 
 dung_beetles <- read.csv('dung_beetles.csv')
 #input dung beetles data, which is an integer type of data 
+
 str(dung_beetles)
 species_names <- colnames(dung_beetles)
 #use the colnames function like this to get all the names of the column and assign it to an object
@@ -26,3 +27,6 @@ copris
 microcopris <- gsub(pattern = 'Microcopis', x = species_names, replacement = 'Microcopris')
 microcopris
 #again using gsub to correct the species name 
+Q8 <- gsub('Copis', 'Copris',
+      gsub('Microcopis', 'Microcopris', species_names))     
+Q8 #if you want to correct both genus names in the same code rather than doing it separately 
