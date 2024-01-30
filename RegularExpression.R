@@ -28,5 +28,20 @@ microcopris <- gsub(pattern = 'Microcopis', x = species_names, replacement = 'Mi
 microcopris
 #again using gsub to correct the species name 
 Q8 <- gsub('Copis', 'Copris',
-      gsub('Microcopis', 'Microcopris', species_names))     
+      gsub('Microcopis', 'Microcopris', species_names))
+Q8 <- gsub(pattern = 'opis', x = species_names, replacement = 'opris')
+#this is another way to do the same thing 
 Q8 #if you want to correct both genus names in the same code rather than doing it separately 
+str(dung_beetles)
+#new dataframe was made to understand how to complete Q9
+tiny_df <- data.frame(c('steph', 'fahal','riya'),c('apple','banana', 'orange'))
+str(tiny_df)
+tiny_df
+colnames(tiny_df) <- c('name', 'fruit')
+tiny_df
+colnames(dung_beetles) <- c(Q8)
+#this is the code for Q9 to assign the correct colnames to the original dataset 
+dung_beetles
+Q10 <- grep(pattern = 'O*_s', x = Q8)
+Q10 #idk why it won't work if i use dung_beetles
+subset <- dung_beetles$Month 
